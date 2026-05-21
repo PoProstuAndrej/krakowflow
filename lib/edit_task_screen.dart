@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'models/task.dart';
 
 class EditTaskScreen extends StatefulWidget {
 
@@ -88,7 +88,9 @@ class _EditTaskScreenState
 
               onPressed: () {
 
+
                 final updatedTask = Task(
+                  id: widget.task.id,
                   title: titleController.text,
                   deadline: deadlineController.text,
                   priority: priorityController.text,
